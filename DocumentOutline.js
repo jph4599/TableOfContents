@@ -101,8 +101,6 @@ let DocumentOutline;
                 span.addEventListener('click', e => {
                     window.scrollTo(0, this._headingMap[i].tag.offsetTop);
                     if(this._isMobile) this.hideOutline();
-                    //document.getElementsByClassName('outline-search')[0].value = '';
-                    //this.onSearchInput('')  
                 })
 
                 // build dom
@@ -164,25 +162,9 @@ let DocumentOutline;
             this._menuMobile = document.createElement('div');
             this._menuMobile.classList.add('outline-mobile-menu-icon-container');
 
-            // serachbar
-            // this._searchbar = document.createElement('input');
-            // this._searchbar.classList = 'outline-search';  
-            // this._searchbar.setAttribute('type','text');  
-            // this._searchbar.setAttribute('placeholder','Search...')
-            // this._searchbar.addEventListener('keyup', e => this.onSearchInput(e.target.value));
-            
-            // searchbar container
-            // this._searchbarContainer = document.createElement('div');
-            // this._noResults = document.createElement('p');
-            // this._noResults.innerHTML = 'No results found.';
-            // this._searchbarContainer.classList.add('outline-search-container');
-            // this._searchbarContainer.appendChild(this._searchbar);
-            // this._searchbarContainer.appendChild(this._noResults);
-
             // header
             this._navHeader = document.createElement('div');
             this._navHeader.classList = 'outline-nav-header';
-            //this._navHeader.appendChild(this._searchbarContainer);
             this._navHeader.appendChild(this._menuIcon);
 
             // outline
@@ -229,34 +211,6 @@ let DocumentOutline;
         }
 
         /**
-         * @function onSearchInput 
-         * @description Called when a search is submitted
-         * @param {String} text text to search
-         */
-        onSearchInput = text => {
-            let filter = text.toLowerCase();
-            let spans = document.querySelectorAll('.li-content > span');
-            let divs = document.querySelectorAll('.li-content');
-
-            let resultsFound = false;
-            for (let i = 0; i < spans.length; i++) {
-                let txtValue = spans[i].innerText || spans[i].innerHTML;
-                if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                  divs[i].style.display = "";
-                  resultsFound = true;
-                } else {
-                  divs[i].style.display = "none";
-                }
-            }
-
-            if(!resultsFound) 
-                this._noResults.style.display = 'block';
-            else
-                this._noResults.style.display = 'none';
-
-        };
-
-        /**
          * @function showOutline
          * @description Show document outline.
          * On **desktop** the outline is placed aside the main content takes 20% of the width.
@@ -280,7 +234,6 @@ let DocumentOutline;
                 this._nav.style.overflowY = 'visible';
                 this._menuIcon.style.visibility = 'visible';
                 this._addIconSvg(this._menuIcon, 'close');
-                //this._searchbar.style.display = 'block';
             }, 400);
         }
 
@@ -291,7 +244,6 @@ let DocumentOutline;
          * On **mobile** the outline disappears completly and a floating button appears in the bottom-left corner.
          */
         hideOutline = () => {
-            //this._searchbar.style.display = 'none';
             this._menuIcon.style.visibility = 'hidden';
             this._addIconSvg(this._menuIcon, 'menu');
             this._navHeader.classList.add('outline-nav-header-collapsed');

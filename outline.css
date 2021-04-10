@@ -69,35 +69,6 @@ body{
 }
 
 
-/****** OUTLINE SEARCH ******/
-
-.outline-search-container{
-    display: block;
-}
-.outline-search-container p{
-    color: var(--outline-text-color-light);
-    font-size: .8em;
-    padding-left: 2.5%;
-    display: none;
-}
-.outline-search{
-    width: 60%;
-    padding: 3%;
-    background: transparent;
-    border: solid 1px gray;
-    border-radius: .2em;
-    transition: width .2s;
-    justify-self: start;
-    font-size: .9em;
-    line-height: 1.5em;
-    color: var(--outline-text-color);
-}
-.outline-search:focus{
-    width: 100%;
-    border-color: var(--outline-primary-color);
-}
-
-
 /****** OUTLINE MENU ICON ******/
 
 .outline-menu-icon-container{
