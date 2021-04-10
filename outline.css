@@ -35,7 +35,7 @@ body{
     position: fixed;
     width: 20%;
     height: 100%;
-    padding: 0% 1.5% 0% 0%;
+    padding: 2% 1.5%;
     z-index: 10;
     top: 0;
     left: 0;
@@ -103,9 +103,9 @@ body{
 .outline-menu-icon-container{
     top: 1%;
     right: 2%;
-    /* width: 30%; */
+    width: 30%;
     height: 100%;
-    padding: 3% 0% 0% 0%;
+    padding: 3%;
     justify-self: end;
     cursor: pointer;
     border-radius: 2em;
@@ -171,7 +171,7 @@ body{
 }
 
 .li-content{
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
 
 .li-title-1{
