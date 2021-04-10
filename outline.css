@@ -74,21 +74,18 @@ body{
 .outline-menu-icon-container{
     top: 1%;
     right: 2%;
-    /* width: 30%; */
     height: 100%;
     padding: 3% 0% 0% 0%;
-    justify-self: end;
     cursor: pointer;
     border-radius: 2em;
-    align-items: start;
 }
 .outline-menu-container-collapsed{
     width: 70%;
     justify-self: center;
 }
 .outline-menu-icon-container svg{
-    width: 100%;
     fill: var(--outline-primary-color);
+    float: right;
 }
 .outline-menu-container-collapsed svg{
     height: 100%;
