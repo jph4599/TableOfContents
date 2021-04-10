@@ -7,8 +7,8 @@ let DocumentOutline;
     const menuSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='transform:;-ms-filter:'><path d='M4 11H16V13H4zM4 6H20V8H4zM4 18L11 18 11.235 18 11.235 16 11 16 4 16z'></path></svg>";
     const closeSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke='var(--outline-primary-color)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minimize-2'><polyline points='4 14 10 14 10 20'></polyline><polyline points='20 10 14 10 14 4'></polyline><line x1='14' y1='10' x2='21' y2='3'></line><line x1='3' y1='21' x2='10' y2='14'></line></svg>";
     const cancelSvg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'> <path data-name='layer1'fill='var(--outline-text-color-light)' d='M51 17.25L46.75 13 32 27.75 17.25 13 13 17.25 27.75 32 13 46.75 17.25 51 32 36.25 46.75 51 51 46.75 36.25 32 51 17.25z'></path></svg>";
+    const plusMinusSvg = "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14' height='14' viewBox='0 0 16 16'><path fill='#FFFFFF' d='M10 7h6v2h-6v-2z'></path><path fill='#FFFFFF' d='M4 5h-2v2h-2v2h2v2h2v-2h2v-2h-2z'></path><path fill='#FFFFFF' d='M6 2l3 12h1l-3-12z'></path></svg> ";
 
-    
     DocumentOutline = class DocumentOutline {
 
         /**
@@ -95,18 +95,36 @@ let DocumentOutline;
                 let li = document.createElement('li');
                 let span = document.createElement('span');
                 let div = document.createElement('div');
-                
+
                 // add navigation
-                span.innerHTML = this._headingMap[i].tag.innerHTML;    
+                span.innerHTML = this._headingMap[i].tag.innerHTML;
                 span.addEventListener('click', e => {
                     window.scrollTo(0, this._headingMap[i].tag.offsetTop);
                     if(this._isMobile) this.hideOutline();
-                    document.getElementsByClassName('outline-search')[0].value = '';
-                    this.onSearchInput('')  
+                    //document.getElementsByClassName('outline-search')[0].value = '';
+                    //this.onSearchInput('')  
                 })
-                
+
                 // build dom
                 div.setAttribute('class','li-content li-title-'+level);
+
+                let needsPlusMinus = i + 1 < this._headingMap.length && this._headingMap[i + 1].level > level;
+                if (needsPlusMinus) {
+                    let spanPlusMinus = document.createElement('span');
+                    spanPlusMinus.innerHTML = plusMinusSvg;
+                    spanPlusMinus.addEventListener('click', e => {
+                        let childrenElements = e.currentTarget.parentNode.nextElementSibling;
+                        if (childrenElements !== null) {
+                            if (childrenElements.style.display === "none") {
+                                childrenElements.style.display = "block";
+                            } else {
+                                childrenElements.style.display = "none";
+                            }
+                        }
+                    })
+                    div.appendChild(spanPlusMinus);
+                }
+
                 div.appendChild(span);
                 li.appendChild(div);
             
@@ -116,7 +134,7 @@ let DocumentOutline;
                     ul.appendChild(li);
                     node.elem = ul;
                 }
-                
+
                 // attach to parent
                 let container = parent.elem;
                 if(parent.elem.tagName == 'UL' 
@@ -127,16 +145,16 @@ let DocumentOutline;
 
                 // attach to list
                 container.setAttribute('class','list-head');
-                container.appendChild(node.elem);        
+                container.appendChild(node.elem);
                 this._parentList.unshift(node);
             }
             
             // save list root
-            this._root = this._parentList[this._parentList.length-1].elem;  
-            this._root.setAttribute('id','outline-list-root');      
+            this._root = this._parentList[this._parentList.length-1].elem;
+            this._root.setAttribute('id','outline-list-root');
         }
         
-        _renderOutline = () => {             
+        _renderOutline = () => {
             this._nav = document.createElement('nav');
             this._main = document.createElement('div');
 
@@ -147,24 +165,24 @@ let DocumentOutline;
             this._menuMobile.classList.add('outline-mobile-menu-icon-container');
 
             // serachbar
-            this._searchbar = document.createElement('input');
-            this._searchbar.classList = 'outline-search';  
-            this._searchbar.setAttribute('type','text');  
-            this._searchbar.setAttribute('placeholder','Search...')
-            this._searchbar.addEventListener('keyup', e => this.onSearchInput(e.target.value));
+            // this._searchbar = document.createElement('input');
+            // this._searchbar.classList = 'outline-search';  
+            // this._searchbar.setAttribute('type','text');  
+            // this._searchbar.setAttribute('placeholder','Search...')
+            // this._searchbar.addEventListener('keyup', e => this.onSearchInput(e.target.value));
             
             // searchbar container
-            this._searchbarContainer = document.createElement('div');
-            this._noResults = document.createElement('p');
-            this._noResults.innerHTML = 'No results found.';
-            this._searchbarContainer.classList.add('outline-search-container');
-            this._searchbarContainer.appendChild(this._searchbar);
-            this._searchbarContainer.appendChild(this._noResults);
+            // this._searchbarContainer = document.createElement('div');
+            // this._noResults = document.createElement('p');
+            // this._noResults.innerHTML = 'No results found.';
+            // this._searchbarContainer.classList.add('outline-search-container');
+            // this._searchbarContainer.appendChild(this._searchbar);
+            // this._searchbarContainer.appendChild(this._noResults);
 
             // header
             this._navHeader = document.createElement('div');
             this._navHeader.classList = 'outline-nav-header';
-            this._navHeader.appendChild(this._searchbarContainer);
+            //this._navHeader.appendChild(this._searchbarContainer);
             this._navHeader.appendChild(this._menuIcon);
 
             // outline
@@ -262,7 +280,7 @@ let DocumentOutline;
                 this._nav.style.overflowY = 'visible';
                 this._menuIcon.style.visibility = 'visible';
                 this._addIconSvg(this._menuIcon, 'close');
-                this._searchbar.style.display = 'block';
+                //this._searchbar.style.display = 'block';
             }, 400);
         }
 
@@ -273,7 +291,7 @@ let DocumentOutline;
          * On **mobile** the outline disappears completly and a floating button appears in the bottom-left corner.
          */
         hideOutline = () => {
-            this._searchbar.style.display = 'none';
+            //this._searchbar.style.display = 'none';
             this._menuIcon.style.visibility = 'hidden';
             this._addIconSvg(this._menuIcon, 'menu');
             this._navHeader.classList.add('outline-nav-header-collapsed');
