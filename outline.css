@@ -55,9 +55,10 @@ body{
 
 .outline-nav-header{
     display: grid;
-    grid-template-columns: 70% 30%;
-    align-items: center;
-    margin-bottom: 15%;
+    /* grid-template-columns: 70% 30%; */
+    /* align-items: center; */
+    align-items: right;
+    /* margin-bottom: 15%; */
 }
 
 .outline-nav-header-collapsed{
