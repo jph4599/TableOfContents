@@ -162,6 +162,90 @@ body{
     font-size: .7em;
 }
 
+a[type='page-link'] {
+    display: block;
+    background-color: var(--bg-color);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 600;
+
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+a[type='page-link']:hover {
+    box-shadow: rgba(0, 0, 0.2, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--primary-color);
+}
+
+p[type='description'] {
+    color: var(--light-text-color);
+    margin: 0rem;
+    margin-bottom: 1rem;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 9px;
+    height: 8px;
+    padding: 4px;
+    position: absolute;
+    background-color: var(--borders);
+    border: solid 1px var(--boxes-darker);
+    border-radius: 4.5px;
+}
+
+::-webkit-scrollbar:hover {
+    background-color: var(--borders);
+}
+
+::-webkit-scrollbar-corner {
+    background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--boxes-darker2);
+    background-clip: padding-box;
+    border-radius: 4.5px;
+    margin-right: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--boxes-darkest);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--boxes-darkest);
+}
+
+/*MIN MAX CLOSE*/
+#w-min,
+#w-max,
+#w-restore,
+#w-close {
+    border-radius: 0px !important;
+    font-size: 10px !important;
+    width: 46px !important;
+    height: 29px !important;
+}
+
+.btn.toolbar-icon svg,
+.btn.toolbar-icon .ty-icon {
+    position: relative;
+    top: 2px;
+}
+
+#w-close.btn.toolbar-icon .ty-icon {
+    left: 1px;
+}
+
+#w-close:hover {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+}
 
 /*********** ANIMATIONS ************/
 .slide-left {
@@ -189,9 +273,7 @@ body{
               transform: translateX(-100px);
     }
   }
-  
 
-  
 /*********** MOBILE & TABLET ************/
 @media only screen and (max-width: 780px){
 
@@ -261,5 +343,9 @@ body{
         font-size: 1.1em;
         padding-inline-start: 0;
     }
-    
+
+    pre {
+        overflow-x: auto !important;
+        white-space: pre !important;
+    }
 }
