@@ -6,8 +6,7 @@ let DocumentOutline;
 {
     const menuSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='transform:;-ms-filter:'><path d='M4 11H16V13H4zM4 6H20V8H4zM4 18L11 18 11.235 18 11.235 16 11 16 4 16z'></path></svg>";
     const closeSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke='var(--outline-primary-color)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-minimize-2'><polyline points='4 14 10 14 10 20'></polyline><polyline points='20 10 14 10 14 4'></polyline><line x1='14' y1='10' x2='21' y2='3'></line><line x1='3' y1='21' x2='10' y2='14'></line></svg>";
-    const cancelSvg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'> <path data-name='layer1'fill='var(--outline-text-color-light)' d='M51 17.25L46.75 13 32 27.75 17.25 13 13 17.25 27.75 32 13 46.75 17.25 51 32 36.25 46.75 51 51 46.75 36.25 32 51 17.25z'></path></svg>";
-    const plusMinusSvg = "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14' height='14' viewBox='0 0 16 16'><path fill='#FFFFFF' d='M10 7h6v2h-6v-2z'></path><path fill='#FFFFFF' d='M4 5h-2v2h-2v2h2v2h2v-2h2v-2h-2z'></path><path fill='#FFFFFF' d='M6 2l3 12h1l-3-12z'></path></svg> ";
+    const plusMinusSvg = "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14' height='14' viewBox='0 0 16 16'><path fill='#000000' d='M10 7h6v2h-6v-2z'></path><path fill='#000000' d='M4 5h-2v2h-2v2h2v2h2v-2h2v-2h-2z'></path><path fill='#000000' d='M6 2l3 12h1l-3-12z'></path></svg> ";
 
     DocumentOutline = class DocumentOutline {
 

@@ -1,6 +1,6 @@
 :root{
-    --outline-text-color: white;
-    --outline-text-color-light: lightgrey;
+    --outline-text-color: black;
+    --outline-text-color-light: black;
     --outline-primary-color: rgb(0, 140, 255);
     --outline-bg-color: rgb(37, 37, 37);
 }

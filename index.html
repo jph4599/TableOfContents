@@ -10,14 +10,6 @@
             overflow-x: initial !important;
         }
 
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --select-text-bg-color: #B5D6FC;
-            --select-text-font-color: auto;
-            --monospace: "Lucida Console", Consolas, "Courier", monospace;
-        }
-
         html {
             font-size: 14px;
             background-color: var(--bg-color);
@@ -297,9 +289,9 @@
         /*by H16nning*/
 
         :root {
-            --bg-color: #0d1117;
-            --side-bar-bg-color: #161b22;
-            --control-text-color: #e6ecf1;
+            --bg-color: #FFFFFF;
+            --side-bar-bg-color: #FFFFFF;
+            --control-text-color: #000000;
             --primary-color: rgb(34, 137, 255);
             --primary-btn-border-color: #3884ff;
             --active-file-bg-color: #5d6574;
@@ -308,11 +300,11 @@
             --item-hover-text-color: #8092af;
             --item-hover-bg-color: #29303c;
             --window-border: 1px solid #5d6574;
-            --select-text-font-color: #e6ecf1;
+            --select-text-font-color: #000000;
             --select-text-bg-color: #3277e5;
 
-            --md-char-color: #8092af;
-            --heading-char-color: #8092af;
+            --md-char-color: #000000;
+            --heading-char-color: #000000;
             --meta-content-color: #3783ff;
 
             --borders: #353c49;
@@ -324,23 +316,23 @@
             --drag-placeholder-color: #424b5a;
             --mds: #060d17;
 
-            --text-color: #e6ecf1;
-            --heading-text-color: white;
-            --light-text-color: #5b697e;
-            --light-text-color-brighter: #768292;
-            --codeboxes: white;
+            --text-color: #000000;
+            --heading-text-color: #000000;
+            --light-text-color: #000000;
+            --light-text-color-brighter: #000000;
+            --codeboxes: black;
             --rawblock-edit-panel-bd: transparent;
 
             --primary-color-white: #5272a7;
             --primary-color-white-darker: #5a83c5;
             --primary-color-darker: #1f65d6;
-            --focus-ring-color: #3783ff;
+            --focus-ring-color: hsl(217, 100%, 61%);
 
             --danger-color: rgb(255, 70, 66);
 
             --node-fill: #5252ad;
             --node-border: #3f3fb8;
-            --cluster-fill: #ffffde;
+            --cluster-fill: #000000;
             --cluster-border: #aaaa33;
             --note-fill: #fff5ad;
             --note-border: #aaaa33;
@@ -362,7 +354,7 @@
             background: var(--bg-color);
             font-family: var(--font-family);
             font-weight: 400;
-            color: white;
+            color: var(--text-color);
             line-height: 1.625rem;
             height: 100%;
         }
@@ -667,10 +659,6 @@
                 overflow-x: auto !important;
                 white-space: pre !important;
             }
-
-            pre div.CodeMirror {
-                display: inline-block;
-            }
         }
     </style>
 
@@ -681,7 +669,7 @@
 <body class='typora-export os-windows'>
     <div id='write' class=''>
         </p>
-        <h1><a name="1documentoutlineexample" class="md-header-anchor"></a><span>1 - Document Outline</span></h1>
+        <h1><a name="1documentTitle" class="md-header-anchor"></a><span>1 - Document Title</span></h1>
         <p><span>A table of contents JavaScript library specially designed for documentation websites.</span></p>
 
         <h2><a name="1.1description" class="md-header-anchor"></a><span>1.1 - Description</span></h2>
@@ -695,7 +683,23 @@ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the 
 
 The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></p>
 
-        <h1><a name="2title" class="md-header-anchor"></a><span>2 - Title</span></h2>
+        <h3><a name="1.3subtitle" class="md-header-anchor"></a><span>1.3 - Subtitle</span></h2>
+        <p><span>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></p>
+
+        <h4><a name="1.4subtitle" class="md-header-anchor"></a><span>1.4 - Subtitle</span></h2>
+        <p><span>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</span></p>
+
+<h1><a name="2title" class="md-header-anchor"></a><span>2 - Title</span></h2>
 
         <h2><a name="2.1subtitle" class="md-header-anchor"></a><span>2.1 - Subtitle</span></h2>
         <p><span>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
@@ -718,7 +722,7 @@ The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the 
     <script>
         let o = new DocumentOutline({
             backgroundColor: 'var(--side-bar-bg-color)',
-            textColor: 'white',
+            textColor: 'var(text-color)',
             accentColor: 'var(--primary-color)'
         });
     </script>
