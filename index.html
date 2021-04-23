@@ -103,50 +103,89 @@
     
         <h2><a name="1.3uploadRentalAgreement" class="md-header-anchor"></a><span>Step 3 - Upload Rental Agreement</span></h2>    
     
-    <style type="text/css">
-        .tg  {border-collapse:collapse;border-spacing:0;}
-        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-          overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-        .tg .tg-0lax{text-align:left;vertical-align:top}
-        </style>
-        <table class="tg">
-        <tbody>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Completed by (PM or MyVR)</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">PM</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Estimated time to complete</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">2 minutes to connect your account</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Setting up a new Stripe account can take as little as a few minutes.</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Requirements</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">You must operate in a supported country (https://stripe.com/global). If you do not, contact your Onboarding Specialist for further guidance.</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Why this step is necessary</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To integrate with VRBO or Expedia.</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To integrate with Booking.com, unless you're using "Payments by Booking.com".</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To enable online payments for your website.</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What to watch out for</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Contact your Onboarding Specialist if you have trouble creating a Stripe account.</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What else to know</span></td>
-            <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">n/a</span></td>
-          </tr>
-          <tr>
-            <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">MyVR instruction links</span></td>
-            <td class="tg-0lax"><a href="https://help.myvr.com/hc/en-us/sections/202373886-Merchant-Accounts"><span style="font-weight:400;font-style:normal;text-decoration:underline;color:#15C;background-color:transparent">Merchant Accounts</span></a></td>
-          </tr>
-        </tbody>
-        </table>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
+            </style>
+            <table class="tg">
+            <tbody>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Completed by (PM or MyVR)</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">PM</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Estimated time to complete</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">2 minutes to connect your account</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Setting up a new Stripe account can take as little as a few minutes.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Requirements</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">You must operate in a supported country (https://stripe.com/global). If you do not, contact your Onboarding Specialist for further guidance.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Why this step is necessary</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To integrate with VRBO or Expedia.</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To integrate with Booking.com, unless you're using "Payments by Booking.com".</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">- To enable online payments for your website.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What to watch out for</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Contact your Onboarding Specialist if you have trouble creating a Stripe account.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What else to know</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">n/a</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">MyVR instruction links</span></td>
+                <td class="tg-0lax"><a href="https://help.myvr.com/hc/en-us/sections/202373886-Merchant-Accounts"><span style="font-weight:400;font-style:normal;text-decoration:underline;color:#15C;background-color:transparent">Merchant Accounts</span></a></td>
+              </tr>
+            </tbody>
+            </table>
     
+        <h2><a name="1.4setUpPaymentSchedules" class="md-header-anchor"></a><span>Step 4 - Set Up Payment Schedules (Optional)</span></h2>      
     
-    
-    
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-0lax{text-align:left;vertical-align:top}
+            </style>
+            <table class="tg">
+            <tbody>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Completed by (PM or MyVR)</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">PM</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Estimated time to complete</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">A few minutes per new item</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Requirements</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">n/a</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Why this step is necessary</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">If you plan to use custom payment schedules other than what MyVR offers out of the box, you can create them.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What to watch out for</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">n/a</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">What else to know</span></td>
+                <td class="tg-0lax"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Not all channels support custom payment schedules.</span></td>
+              </tr>
+              <tr>
+                <td class="tg-0lax"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">MyVR instruction links</span></td>
+                <td class="tg-0lax"><a href="https://help.myvr.com/hc/en-us/articles/360058285311-Creating-and-Managing-Payment-Schedules"><span style="font-weight:400;font-style:normal;text-decoration:underline;color:#15C;background-color:transparent">Creating Payment Schedules</span></a></td>
+              </tr>
+            </tbody>
+            </table>
     
     
     
